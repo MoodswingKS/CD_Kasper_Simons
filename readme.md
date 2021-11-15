@@ -34,3 +34,5 @@ Tip 3: Secrets.
 It's usually not a good idea to give continuous deployment pipelines root access to your server, 
 but we will accept it for this assignment. 
 If you are interested, you can look into how to create and use new users on Ubuntu (and Linux in general).
+
+test
