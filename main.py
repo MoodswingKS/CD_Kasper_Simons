@@ -1,12 +1,15 @@
 from flask import Flask
 
-main = Flask(__name__)
+app = Flask(__name__)
 
-@main.route("/")
+@app.route("/")
 def index():
     return "De laatste opdracht"
 
 
-@main.route("/kasper")
-def cow():
+@app.route("/kasper")
+def kasper():
     return "Lekker gewandeld"
+
+if __name__ == "__main__":
+    app.run()
