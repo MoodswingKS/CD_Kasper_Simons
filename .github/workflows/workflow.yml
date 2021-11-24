@@ -42,8 +42,7 @@ jobs:
             cd var/www/
             mkdir cd_ks
             cd cd_ks
-            git clone git@github.com/MoodswingKS/CD_Kasper_Simons.git
-            echo 'F yes'
+            git clone git@github.com:MoodswingKS/CD_Kasper_Simons.git
             echo 'Lets start by accessing the directory'
             cd /CD_KASPER_SIMONS/
             echo 'Print working directory'
