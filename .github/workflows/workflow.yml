@@ -35,5 +35,5 @@ jobs:
         with:
           host: ${{secrets.SSH_HOST}}
           username: ${{secrets.SSH_USERNAME}}
-          password: ${{secrets.SSH_PASS}}
+          key: ${{secrets.SSH_PASS}}
           script: sh /script.sh
