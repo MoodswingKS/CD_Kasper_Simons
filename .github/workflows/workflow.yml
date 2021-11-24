@@ -34,8 +34,6 @@ jobs:
         uses: appleboy/ssh-action@v0.1.2
         with:
           host: ${{secrets.SSH_HOST}}
-          key: ${{secrets.SSH_KEY}}
-          fingerprint: ${{ secrets.SSH_FINGER }}
           username: ${{secrets.SSH_USERNAME}}
-          passphrase: ${{secrets.SSH_PASS}}
+          password: ${{secrets.SSH_PASS}}
           script: sh /script.sh
