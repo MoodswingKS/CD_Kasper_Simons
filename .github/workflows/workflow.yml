@@ -40,9 +40,9 @@ jobs:
           script: |
             echo 'Welcome to my server'
             cd cd_ks
-            cd /CD_KASPER_SIMONS/
+            cd CD_Kasper_Simons
             echo 'Print working directory'
             pwd
             echo 'Restart systemctl main'
-            systemctl restart main
+            flask run main.py
             echo 'Restart complete' 
