@@ -44,5 +44,5 @@ jobs:
             echo 'Print working directory'
             pwd
             echo 'Restart systemctl main'
-            systemctl restart main
+            systemctl start main
             echo 'Restart complete' 
