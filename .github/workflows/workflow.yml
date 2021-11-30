@@ -44,5 +44,5 @@ jobs:
             echo 'Print working directory'
             pwd
             echo 'Restart systemctl main'
-            flask run main.py
+            systemctl restart main
             echo 'Restart complete' 
