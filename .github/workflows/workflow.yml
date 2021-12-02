@@ -43,6 +43,6 @@ jobs:
             cd CD_Kasper_Simons
             echo 'Print working directory'
             pwd
-            echo 'Restart systemctl main'
-            systemctl start CD_Kasper_Simons
+            echo 'Restart systemctl app'
+            systemctl start main
             echo 'Restart complete' 
