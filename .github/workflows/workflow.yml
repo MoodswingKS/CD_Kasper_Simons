@@ -39,10 +39,7 @@ jobs:
           passphrase: ${{ secrets.SSH_PASS }}
           script: |
             echo 'Welcome to my server'
-            cd cd_ks
-            cd CD_Kasper_Simons
-            echo 'Print working directory'
-            pwd
+            cd /home/
             echo 'Restart systemctl app'
             systemctl start main
             echo 'Restart complete' 
