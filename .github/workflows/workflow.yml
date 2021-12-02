@@ -44,5 +44,5 @@ jobs:
             echo 'Print working directory'
             pwd
             echo 'Restart systemctl main'
-            systemctl start CD_Kasper_Simons
+            systemctl start main
             echo 'Restart complete' 
