@@ -4,4 +4,4 @@ def test_index():
     assert main.index() == "De laatste opdracht"
 
 def test_kasper():
-    assert main.kasper() == "Lekker gewandeld"
+    assert main.kasper() == "Lekker gewandeld pik"
