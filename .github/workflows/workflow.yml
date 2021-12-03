@@ -40,6 +40,7 @@ jobs:
           script: |
             echo 'Welcome to my server'
             cd /home/CD_Kasper_Simons
-            echo 'Restart systemctl app'
-            systemctl start main
+            git pull
+            echo 'Lets see if the change happened' 
+            systemctl restart CD_Kasper_Simons.service
             echo 'Restart complete' 

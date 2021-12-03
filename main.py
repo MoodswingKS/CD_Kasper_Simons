@@ -9,7 +9,7 @@ def index():
 
 @app.route("/kasper")
 def kasper():
-    return "Lekker gewandeld"
+    return "Lekker gewandeld pik"
 
 if __name__ == "__main__":
     app.run()
