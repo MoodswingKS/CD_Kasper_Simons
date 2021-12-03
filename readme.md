@@ -1,38 +1,20 @@
-# You need to master the following to complete this assignment:
+# CD Project
 
-Creating and provisioning a server at Digital Ocean;
-Connecting to a Linux server over SSH;
-Running basic terminal commands on a Linux server;
-Deploying a Flask application on a Linux server.
+I’ve managed to create a continuous development pipeline through the use of a VPS (droplet @ digitalocean), nginx, python, flask and gunicorn. 
 
+A commit made in this repository will execute a series of commands through the SSH connection I’ve configured in github. I have another SSH link, specifically made for without the use of Github - for me to check if all steps in the workflow have been done correctly.
 
-## The continuous deployment pipeline should look like this:
+While building the pipeline I’ve encountered numeral issues, so I narrowed down the top three issues I faced:
 
-You manually write, commit and push some code. This only requires you to be familiar with git.
+### Gunicorn
+Gunicorn was my biggest hurdle in the whole process. Even after successfully running the flask application on the VPS, gunicorn refused to identify the application. 
+The solution was to learn to ‘read better’. 
 
-GitHub Actions runs tests on your code. You can use Pytest for this.
+### SSH connection
+Creating a valid SSH connection between github and the VPS served a lot more complications than initially necessary. As I’m working on Windows, the ‘easy’ method of creating an SSH-key was not working for me. So I used Putty as a tool to create one. But Putty gives me a ‘fingerprint’ in the key, which Github refused to identify which led to errors. With the help of one of the teachers, I created a new key with Git Bash and the issue was immediately fixed.
 
-If and only if the tests pass, GitHub Actions logs into the VPS you have running with Digital Ocean 
-and runs commands such that the code is updated to the latest version.
+### Nginx / app.service
+In the linux terminal the format of an error is less descriptive than I would have hoped for. 
+A simple error code gave me hours of headaches, as I couldn’t figure out yet that error-200 simply meant that I had misspelled a directory somewhere. Through the use of ‘jounalctl -xe’. ‘systemctl status app.service’ and google, I got the answers to those errors.
 
-
-### Finally, write a short, 200/300-word report in which you discuss at least the following:
-
-Name three components of your solution, explain what they are and how they relate to each other. 
-A 'component' can be anything from GitHub Actions or Bash to Digital Ocean and SSH.
-Discuss three problems that you encountered along the way and how you solved them.
-(optional) Anything of note that you want to share about the process of solving this assignment.
-
-### Tips
-
-Tip 1: GitHub: Deploy Keys
-Tip 2: sh files.
-Tip 3: Secrets.
-
-### Extra to do
-
-It's usually not a good idea to give continuous deployment pipelines root access to your server, 
-but we will accept it for this assignment. 
-If you are interested, you can look into how to create and use new users on Ubuntu (and Linux in general).
-
-test
+Kasper Simons
