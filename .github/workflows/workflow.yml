@@ -41,6 +41,7 @@ jobs:
             echo 'Welcome to my server'
             cd /home/CD_Kasper_Simons
             git pull
-            echo 'Lets see if the change happened' 
-            systemctl restart CD_Kasper_Simons.service
-            echo 'Restart complete' 
+            echo 'Lets see if the change happened'
+            cd
+            systemctl restart CD_Kasper_Simons
+            echo 'Restart complete'
